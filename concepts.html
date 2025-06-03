@@ -593,7 +593,7 @@
         </div>
     </section>
     
-    <!-- 關鍵概念總結 -->
+    <!-- 關鍵概念總結 -->    
     <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div class="container-custom">
             <div class="text-center mb-12">
@@ -624,7 +624,7 @@
                     <i class="fas fa-shield-alt text-3xl mb-4 text-yellow-300"></i>
                     <h3 class="font-semibold mb-2">安全保障</h3>
                     <p class="text-sm text-primary-100">
-                        內建安全機制和故障隔離
+                        內建安全機制和故障隔離，提供多層次的安全防護
                     </p>
                 </div>
                 
@@ -634,6 +634,154 @@
                     <p class="text-sm text-primary-100">
                         優化的執行環境和資源管理
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 安全架構 (新增部分) -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">安全架構</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    Adaptive AUTOSAR 提供全面的安全架構，保護車輛系統免受各種威脅
+                </p>
+            </div>
+            
+            <!-- 安全層次 -->
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microchip text-red-600 dark:text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">硬體安全</h3>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 mr-2"></i>
+                            安全啟動機制
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 mr-2"></i>
+                            硬體安全模組 (HSM)
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 mr-2"></i>
+                            硬體隔離技術
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-red-500 mr-2"></i>
+                            防篡改保護
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-cogs text-purple-600 dark:text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">平台安全</h3>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            操作系統安全
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            記憶體保護
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            進程隔離
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-purple-500 mr-2"></i>
+                            資源訪問控制
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="card text-center">
+                    <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shield-alt text-blue-600 dark:text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">應用安全</h3>
+                    <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 text-left">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            身份認證與授權
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            安全通信
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            數據加密
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-blue-500 mr-2"></i>
+                            應用程式簽名
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 威脅模型與防護 -->
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">威脅模型與防護</h3>
+            <div class="card overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-600 dark:text-gray-300">
+                        <thead class="text-xs uppercase bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300">
+                            <tr>
+                                <th scope="col" class="px-6 py-3">威脅類型</th>
+                                <th scope="col" class="px-6 py-3">潛在影響</th>
+                                <th scope="col" class="px-6 py-3">防護措施</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b dark:border-gray-700">
+                                <td class="px-6 py-4 font-medium">未授權訪問</td>
+                                <td class="px-6 py-4">系統功能被非法操作，可能導致安全風險</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded mr-1">身份認證</span>
+                                    <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">訪問控制</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+                                <td class="px-6 py-4 font-medium">數據竊取</td>
+                                <td class="px-6 py-4">敏感數據被非法獲取，可能導致隱私洩露</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded mr-1">數據加密</span>
+                                    <span class="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs rounded">安全存儲</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <td class="px-6 py-4 font-medium">軟體篡改</td>
+                                <td class="px-6 py-4">系統軟體被惡意修改，可能導致功能異常</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded mr-1">程式碼簽名</span>
+                                    <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">完整性檢查</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+                                <td class="px-6 py-4 font-medium">拒絕服務攻擊</td>
+                                <td class="px-6 py-4">系統資源被耗盡，導致服務不可用</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded mr-1">資源限制</span>
+                                    <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">監控與防護</span>
+                                </td>
+                            </tr>
+                            <tr class="border-b dark:border-gray-700">
+                                <td class="px-6 py-4 font-medium">通信劫持</td>
+                                <td class="px-6 py-4">系統間通信被攔截或篡改，可能導致錯誤操作</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded mr-1">安全通信協議</span>
+                                    <span class="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs rounded">消息認證</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

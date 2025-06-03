@@ -136,6 +136,14 @@
                                     <i class="fas fa-check text-primary-500 mr-2"></i>
                                     安全需求評估
                                 </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    威脅分析與風險評估
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全目標定義
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -163,6 +171,14 @@
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-success-500 mr-2"></i>
                                     部署策略規劃
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全架構設計
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全控制措施規劃
                                 </li>
                             </ul>
                         </div>
@@ -192,6 +208,14 @@
                                     <i class="fas fa-check text-purple-500 mr-2"></i>
                                     程式碼審查
                                 </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全程式碼審查
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    滲透測試
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -219,6 +243,14 @@
                                 <li class="flex items-center">
                                     <i class="fas fa-check text-orange-500 mr-2"></i>
                                     效能優化
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全監控
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-shield-alt text-red-500 mr-2"></i>
+                                    安全事件回應
                                 </li>
                             </ul>
                         </div>
@@ -450,67 +482,177 @@
         </div>
     </section>
     
-    <!-- 最佳實踐 -->
-    <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
-        <div class="container-custom">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">開發最佳實踐</h2>
-                <p class="text-xl text-primary-100 max-w-3xl mx-auto">
-                    遵循這些最佳實踐，確保開發過程的效率和品質
-                </p>
+    <!-- 開發最佳實踐 -->
+    <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">開發最佳實踐</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 模型驅動開發 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-project-diagram text-primary-600 dark:text-primary-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">模型驅動開發</h3>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">使用 UML 和 ARXML 模型作為開發的核心，從模型生成代碼框架，確保設計與實作的一致性。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary-500 mr-2"></i>
+                        使用標準化建模工具
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary-500 mr-2"></i>
+                        自動化代碼生成
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-primary-500 mr-2"></i>
+                        模型驗證與一致性檢查
+                    </li>
+                </ul>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-layer-group text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">模型驅動開發</h3>
-                    <p class="text-sm text-primary-100">
-                        使用標準化模型確保設計的一致性和可維護性
-                    </p>
+            <!-- 持續整合 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-success-100 dark:bg-success-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-sync-alt text-success-600 dark:text-success-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">持續整合</h3>
                 </div>
-                
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-sync-alt text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">持續整合</h3>
-                    <p class="text-sm text-primary-100">
-                        建立自動化的建置和測試流程
-                    </p>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">實施自動化測試和部署流程，確保每次代碼變更都經過充分測試，並能快速部署到目標環境。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-success-500 mr-2"></i>
+                        自動化測試流程
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-success-500 mr-2"></i>
+                        持續部署管道
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-success-500 mr-2"></i>
+                        版本控制與分支策略
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 協作開發 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-users text-purple-600 dark:text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">協作開發</h3>
                 </div>
-                
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-users text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">協作開發</h3>
-                    <p class="text-sm text-primary-100">
-                        建立有效的團隊協作和溝通機制
-                    </p>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">建立跨功能團隊協作流程，確保系統設計、開發和測試各環節的無縫銜接。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-purple-500 mr-2"></i>
+                        跨功能團隊協作
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-purple-500 mr-2"></i>
+                        代碼審查流程
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-purple-500 mr-2"></i>
+                        知識共享與文檔管理
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 安全優先 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-shield-alt text-red-600 dark:text-red-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">安全優先</h3>
                 </div>
-                
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-shield-alt text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">安全優先</h3>
-                    <p class="text-sm text-primary-100">
-                        在開發過程中整合安全考量和威脅分析
-                    </p>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">在整個開發生命週期中將安全視為首要考慮因素，從需求分析到部署維護階段都實施安全措施。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        安全設計原則
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        安全程式碼審查
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        安全測試與驗證
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        威脅建模與風險評估
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        安全更新與漏洞管理
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-red-500 mr-2"></i>
+                        安全事件回應計劃
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 效能監控 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-tachometer-alt text-orange-600 dark:text-orange-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">效能監控</h3>
                 </div>
-                
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-chart-line text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">效能監控</h3>
-                    <p class="text-sm text-primary-100">
-                        持續監控系統效能和資源使用情況
-                    </p>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">持續監控系統效能指標，及時發現並解決效能瓶頸，確保系統穩定運行。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-orange-500 mr-2"></i>
+                        效能基準測試
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-orange-500 mr-2"></i>
+                        資源使用監控
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-orange-500 mr-2"></i>
+                        效能優化策略
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 標準合規 -->
+            <div class="card p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-clipboard-check text-blue-600 dark:text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">標準合規</h3>
                 </div>
-                
-                <div class="glass-effect rounded-xl p-6 text-center">
-                    <i class="fas fa-book text-3xl mb-4 text-yellow-300"></i>
-                    <h3 class="font-semibold mb-3">文件化</h3>
-                    <p class="text-sm text-primary-100">
-                        維護完整的技術文件和使用者指南
-                    </p>
-                </div>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">確保開發過程和最終產品符合 AUTOSAR 標準和相關行業規範，包括功能安全和網絡安全標準。</p>
+                <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-blue-500 mr-2"></i>
+                        AUTOSAR 標準合規
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-blue-500 mr-2"></i>
+                        ISO 26262 功能安全
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-blue-500 mr-2"></i>
+                        ISO/SAE 21434 網絡安全
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-blue-500 mr-2"></i>
+                        合規性驗證與認證
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
     
     <!-- 行動呼籲 -->
     <section class="section-padding">

@@ -463,3 +463,222 @@
     <script src="./js/main.js"></script>
 </body>
 </html>
+
+                <div class="card">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-shield-alt text-red-600 text-xl mr-3"></i>
+                        <h4 class="font-semibold text-gray-900 dark:text-white">其他重要集群</h4>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        除了上述核心功能集群外，Adaptive AUTOSAR 還定義了多個專門的功能集群，用於處理特定領域的需求。
+                    </p>
+                    
+                    <!-- 安全相關功能集群 -->
+                    <h5 class="font-semibold text-gray-800 dark:text-gray-200 mb-3 border-l-4 border-red-500 pl-3">安全相關功能集群</h5>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">安全管理 (Security Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                提供系統級安全功能，包括安全啟動、安全更新和安全監控。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">安全啟動</span>
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">完整性驗證</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">身份與訪問管理 (Identity & Access Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                管理系統中的身份認證、授權和訪問控制。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">認證</span>
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">授權</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">密鑰管理 (Key Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                處理加密密鑰的生成、分發、存儲和更新。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">密鑰生命週期</span>
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">安全存儲</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">安全通信 (Secure Communication)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                確保系統內部和外部通信的機密性、完整性和可用性。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">加密通道</span>
+                                <span class="px-2 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 text-xs rounded">數據保護</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 系統管理功能集群 -->
+                    <h5 class="font-semibold text-gray-800 dark:text-gray-200 mb-3 border-l-4 border-purple-500 pl-3">系統管理功能集群</h5>
+                    <div class="grid md:grid-cols-2 gap-4 mb-6">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">診斷管理 (Diagnostic Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                提供系統診斷功能，支援標準診斷協議和故障管理。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">UDS</span>
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">DoIP</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">更新配置管理 (Update & Config Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                管理系統軟體更新和配置變更。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">OTA</span>
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">配置管理</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">日誌追蹤 (Log & Trace)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                提供系統日誌記錄和追蹤功能，支援調試和問題診斷。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">日誌記錄</span>
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">性能追蹤</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">網路管理 (Network Management)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                管理網路連接、服務發現和網路狀態監控。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">服務發現</span>
+                                <span class="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs rounded">連接管理</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 平台功能集群 -->
+                    <h5 class="font-semibold text-gray-800 dark:text-gray-200 mb-3 border-l-4 border-blue-500 pl-3">平台功能集群</h5>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">操作系統介面 (OS Interface)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                提供標準化的操作系統介面，支援 POSIX 兼容性。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">POSIX</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">進程管理</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                            <h6 class="font-semibold text-gray-900 dark:text-white mb-2">硬體抽象 (Hardware Abstraction)</h6>
+                            <p class="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                                提供硬體抽象層，隔離應用程式和底層硬體。
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">驅動抽象</span>
+                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">平台獨立性</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 行動呼籲 -->
+    <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+        <div class="container-custom text-center">
+            <h2 class="text-3xl font-bold mb-4">準備深入了解開發流程？</h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                探索如何使用這些功能集群來建構強大的 Adaptive AUTOSAR 應用程式
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="methodology.html" class="btn-secondary inline-flex items-center">
+                    <i class="fas fa-route mr-2"></i>
+                    開發方法論
+                </a>
+                <a href="concepts.html" class="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-flex items-center">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    核心概念
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-white section-padding">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-car text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Adaptive AUTOSAR</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        探索現代汽車軟體架構的完整指南，深入了解 Adaptive AUTOSAR 的核心概念和實作方法。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="methodology.html" class="text-gray-300 hover:text-white transition-colors">開發方法論</a></li>
+                        <li><a href="concepts.html" class="text-gray-300 hover:text-white transition-colors">核心概念</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">資源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">文件</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">範例</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">社群</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Wistron. 本指南僅供學習和參考使用。
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 返回頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
