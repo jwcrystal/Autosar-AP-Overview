@@ -1,0 +1,24 @@
+{
+  "name": "adaptive-autosar-guide",
+  "version": "1.0.0",
+  "description": "精美的 Adaptive AUTOSAR 網頁指南",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=3000",
+    "build": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "build-prod": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify"
+  },
+  "keywords": [
+    "autosar",
+    "adaptive",
+    "automotive",
+    "software",
+    "architecture"
+  ],
+  "author": "Wistron",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.0",
+    "live-server": "^1.2.2"
+  }
+}

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive AUTOSAR 指南 - 現代汽車軟體架構</title>
+    <meta name="description" content="深入了解 Adaptive AUTOSAR 平台，探索現代汽車軟體架構的核心概念、功能集群和開發方法論。">
+    <meta name="keywords" content="Adaptive AUTOSAR, 汽車軟體, 軟體架構, 功能集群, 開發方法論">
+    
+    <!-- Tailwind CSS -->
+    <link href="./css/styles.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <!-- 導航欄 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-car text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900 dark:text-white">Adaptive AUTOSAR</span>
+                </div>
+                
+                <!-- 桌面導航 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link">首頁</a>
+                    <a href="features.html" class="nav-link">功能集群</a>
+                    <a href="methodology.html" class="nav-link">開發方法論</a>
+                    <a href="concepts.html" class="nav-link">概念</a>
+                    
+                    <!-- 主題切換按鈕 -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                </div>
+                
+                <!-- 手機選單按鈕 -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 手機導航選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="container-custom py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="nav-link">首頁</a>
+                    <a href="features.html" class="nav-link">功能集群</a>
+                    <a href="methodology.html" class="nav-link">開發方法論</a>
+                    <a href="concepts.html" class="nav-link">概念</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 英雄區塊 -->
+    <section id="home" class="hero-gradient text-white section-padding pt-32">
+        <div class="container-custom">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+                    Adaptive <span class="text-yellow-300">AUTOSAR</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-blue-100 animate-slide-up">
+                    探索現代汽車軟體架構的未來
+                </p>
+                <p class="text-lg mb-12 text-blue-200 max-w-3xl mx-auto leading-relaxed animate-slide-up">
+                    Adaptive AUTOSAR 是專為高性能計算平台設計的開放式軟體架構標準，
+                    支援動態軟體更新、服務導向架構，以及現代汽車電子系統的複雜需求。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+                    <a href="features.html" class="btn-primary inline-flex items-center">
+                        <i class="fas fa-rocket mr-2"></i>
+                        探索功能
+                    </a>
+                    <a href="#overview" class="btn-secondary inline-flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        了解更多
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 滾動指示器 -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+            <i class="fas fa-chevron-down text-2xl text-blue-200"></i>
+        </div>
+    </section>
+    
+    <!-- 概覽區塊 -->
+    <section id="overview" class="section-padding bg-gray-50 dark:bg-gray-800">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-gradient mb-4">為什麼選擇 Adaptive AUTOSAR？</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    面對日益複雜的汽車電子系統，Adaptive AUTOSAR 提供了靈活、可擴展的解決方案
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card text-center group hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-200 dark:group-hover:bg-primary-800 transition-colors">
+                        <i class="fas fa-cogs text-2xl text-primary-600 dark:text-primary-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">靈活架構</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        支援動態軟體配置和運行時更新，適應快速變化的汽車技術需求
+                    </p>
+                </div>
+                
+                <div class="card text-center group hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-success-100 dark:bg-success-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-success-200 dark:group-hover:bg-success-800 transition-colors">
+                        <i class="fas fa-shield-alt text-2xl text-success-600 dark:text-success-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">安全可靠</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        內建安全機制和故障處理，確保關鍵汽車系統的穩定運行
+                    </p>
+                </div>
+                
+                <div class="card text-center group hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 dark:group-hover:bg-purple-800 transition-colors">
+                        <i class="fas fa-network-wired text-2xl text-purple-600 dark:text-purple-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">服務導向</h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        基於服務的通信模式，實現模組化設計和系統間的高效協作
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 主要功能預覽 -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-gradient mb-4">核心功能集群</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    探索 Adaptive AUTOSAR 的主要功能模組，了解每個集群如何協同工作
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card hover:shadow-2xl transition-all duration-300 border-l-4 border-primary-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-microchip text-primary-600 text-2xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">執行管理</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        管理應用程式生命週期和系統資源分配
+                    </p>
+                </div>
+                
+                <div class="card hover:shadow-2xl transition-all duration-300 border-l-4 border-success-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-exchange-alt text-success-600 text-2xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">通信管理</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        處理服務間通信和網路協定
+                    </p>
+                </div>
+                
+                <div class="card hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-database text-purple-600 text-2xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">持久化</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        提供資料儲存和檔案系統管理
+                    </p>
+                </div>
+                
+                <div class="card hover:shadow-2xl transition-all duration-300 border-l-4 border-orange-500">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-clock text-orange-600 text-2xl mr-3"></i>
+                        <h3 class="font-semibold text-gray-900 dark:text-white">時間同步</h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        確保系統時間的精確同步
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="features.html" class="btn-primary inline-flex items-center">
+                    <i class="fas fa-arrow-right mr-2"></i>
+                    查看所有功能
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-white section-padding">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-car text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Adaptive AUTOSAR</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        探索現代汽車軟體架構的完整指南，深入了解 Adaptive AUTOSAR 的核心概念和實作方法。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="text-gray-300 hover:text-white transition-colors">功能集群</a></li>
+                        <li><a href="methodology.html" class="text-gray-300 hover:text-white transition-colors">開發方法論</a></li>
+                        <li><a href="concepts.html" class="text-gray-300 hover:text-white transition-colors">核心概念</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">資源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">文件</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">範例</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">社群</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Wistron. 本指南僅供學習和參考使用。
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 返回頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

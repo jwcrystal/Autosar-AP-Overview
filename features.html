@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>功能集群 - Adaptive AUTOSAR 指南</title>
+    <meta name="description" content="深入了解 Adaptive AUTOSAR 的核心功能集群，包括執行管理、通信管理、持久化等關鍵模組。">
+    
+    <!-- Tailwind CSS -->
+    <link href="./css/styles.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+    <!-- 導航欄 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+        <div class="container-custom">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-car text-white text-lg"></i>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900 dark:text-white">Adaptive AUTOSAR</span>
+                </div>
+                
+                <!-- 桌面導航 -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">首頁</a>
+                    <a href="features.html" class="nav-link text-primary-600 dark:text-primary-400 font-semibold">功能集群</a>
+                    <a href="methodology.html" class="nav-link">開發方法論</a>
+                    <a href="concepts.html" class="nav-link">概念</a>
+                    
+                    <!-- 主題切換按鈕 -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                        <i class="fas fa-moon dark:hidden"></i>
+                        <i class="fas fa-sun hidden dark:inline"></i>
+                    </button>
+                </div>
+                
+                <!-- 手機選單按鈕 -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+                    <i class="fas fa-bars text-gray-600 dark:text-gray-300"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 手機導航選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="container-custom py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="nav-link">首頁</a>
+                    <a href="features.html" class="nav-link text-primary-600 dark:text-primary-400 font-semibold">功能集群</a>
+                    <a href="methodology.html" class="nav-link">開發方法論</a>
+                    <a href="concepts.html" class="nav-link">概念</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- 麵包屑導航 -->
+    <div class="pt-20 pb-4 bg-gray-50 dark:bg-gray-800">
+        <div class="container-custom">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html" class="text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-primary-400">
+                            <i class="fas fa-home mr-2"></i>
+                            首頁
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+                            <span class="text-gray-500 dark:text-gray-400">功能集群</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- 頁面標題 -->
+    <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+        <div class="container-custom text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">功能集群</h1>
+            <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+                深入了解 Adaptive AUTOSAR 的核心功能模組，每個集群都提供特定的服務和能力
+            </p>
+        </div>
+    </section>
+    
+    <!-- 功能集群概覽 -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                        什麼是功能集群？
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                        功能集群（Functional Cluster）是 Adaptive AUTOSAR 架構的核心組成部分，
+                        每個集群提供特定的系統服務和 API，支援應用程式的各種需求。
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                <strong>模組化設計：</strong>每個集群專注於特定功能領域
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                <strong>標準化 API：</strong>提供一致的程式介面
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-primary-600 dark:text-primary-400 text-sm"></i>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">
+                                <strong>可擴展性：</strong>支援系統功能的靈活擴展
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl p-8">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-cubes text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">7+ 核心集群</h3>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            涵蓋從執行管理到診斷服務的完整功能範圍
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 功能集群詳細介紹 -->
+    <section class="section-padding bg-gray-50 dark:bg-gray-800">
+        <div class="container-custom">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">核心功能集群</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                    探索每個功能集群的詳細功能和應用場景
+                </p>
+            </div>
+            
+            <div class="space-y-8">
+                <!-- 執行管理 -->
+                <div class="card hover:shadow-2xl transition-all duration-300">
+                    <div class="grid lg:grid-cols-3 gap-8 items-center">
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-microchip text-primary-600 dark:text-primary-400 text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">執行管理 (Execution Management)</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                負責管理應用程式的生命週期，包括啟動、停止、監控和資源分配。
+                                確保系統資源的有效利用和應用程式的穩定運行。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-play-circle text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">應用程式啟動管理</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-memory text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">資源監控與分配</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-heartbeat text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">健康狀態監控</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-shield-alt text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">故障恢復機制</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl p-6 text-white">
+                                <i class="fas fa-cogs text-4xl mb-4"></i>
+                                <h4 class="font-semibold mb-2">核心服務</h4>
+                                <p class="text-sm text-primary-100">Process Management<br>Resource Control<br>State Machine</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 通信管理 -->
+                <div class="card hover:shadow-2xl transition-all duration-300">
+                    <div class="grid lg:grid-cols-3 gap-8 items-center">
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-success-100 dark:bg-success-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-exchange-alt text-success-600 dark:text-success-400 text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">通信管理 (Communication Management)</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                提供服務導向的通信架構，支援應用程式間的資料交換和服務發現。
+                                實現高效、可靠的分散式通信機制。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-search text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">服務發現機制</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-paper-plane text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">事件驅動通信</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-handshake text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">方法調用服務</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-network-wired text-success-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">網路協定支援</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-success-500 to-success-700 rounded-2xl p-6 text-white">
+                                <i class="fas fa-satellite-dish text-4xl mb-4"></i>
+                                <h4 class="font-semibold mb-2">通信協定</h4>
+                                <p class="text-sm text-success-100">SOME/IP<br>DDS<br>REST/HTTP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 持久化 -->
+                <div class="card hover:shadow-2xl transition-all duration-300">
+                    <div class="grid lg:grid-cols-3 gap-8 items-center">
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-database text-purple-600 dark:text-purple-400 text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">持久化 (Persistency)</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                提供資料儲存和檔案系統管理服務，支援應用程式的資料持久化需求。
+                                確保重要資料在系統重啟後仍能保持。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-save text-purple-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">鍵值對儲存</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-folder text-purple-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">檔案系統存取</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-sync text-purple-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">資料同步機制</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-lock text-purple-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">資料完整性保護</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-6 text-white">
+                                <i class="fas fa-hdd text-4xl mb-4"></i>
+                                <h4 class="font-semibold mb-2">儲存類型</h4>
+                                <p class="text-sm text-purple-100">Key-Value Store<br>File Storage<br>Configuration Data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 時間同步 -->
+                <div class="card hover:shadow-2xl transition-all duration-300">
+                    <div class="grid lg:grid-cols-3 gap-8 items-center">
+                        <div class="lg:col-span-2">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="fas fa-clock text-orange-600 dark:text-orange-400 text-xl"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">時間同步 (Time Synchronization)</h3>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6">
+                                提供精確的時間同步服務，確保分散式系統中各組件的時間一致性。
+                                支援多種時間同步協定和高精度時間戳。
+                            </p>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-stopwatch text-orange-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">高精度時間戳</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-globe text-orange-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">全域時間同步</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-calendar-alt text-orange-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">時間事件調度</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fas fa-chart-line text-orange-500"></i>
+                                    <span class="text-sm text-gray-600 dark:text-gray-300">時間偏移校正</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl p-6 text-white">
+                                <i class="fas fa-satellite text-4xl mb-4"></i>
+                                <h4 class="font-semibold mb-2">同步協定</h4>
+                                <p class="text-sm text-orange-100">PTP (IEEE 1588)<br>NTP<br>GPS Time</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 其他功能集群 -->
+    <section class="section-padding">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">其他重要集群</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300">
+                    更多支援系統運行的關鍵功能模組
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-stethoscope text-red-600 dark:text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">診斷管理</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        提供系統診斷和故障檢測服務，支援 UDS 協定
+                    </p>
+                </div>
+                
+                <div class="card text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-download text-indigo-600 dark:text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">更新配置管理</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        支援 OTA 更新和系統配置管理
+                    </p>
+                </div>
+                
+                <div class="card text-center hover:scale-105 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-bar text-teal-600 dark:text-teal-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">日誌追蹤</h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                        提供系統日誌記錄和事件追蹤功能
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 行動呼籲 -->
+    <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+        <div class="container-custom text-center">
+            <h2 class="text-3xl font-bold mb-4">準備深入了解開發流程？</h2>
+            <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+                探索如何使用這些功能集群來建構強大的 Adaptive AUTOSAR 應用程式
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="methodology.html" class="btn-secondary inline-flex items-center">
+                    <i class="fas fa-route mr-2"></i>
+                    開發方法論
+                </a>
+                <a href="concepts.html" class="btn-primary bg-white text-primary-600 hover:bg-gray-100 inline-flex items-center">
+                    <i class="fas fa-lightbulb mr-2"></i>
+                    核心概念
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 頁尾 -->
+    <footer class="bg-gray-900 text-white section-padding">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-car text-white text-lg"></i>
+                        </div>
+                        <span class="text-xl font-bold">Adaptive AUTOSAR</span>
+                    </div>
+                    <p class="text-gray-300 mb-6 max-w-md">
+                        探索現代汽車軟體架構的完整指南，深入了解 Adaptive AUTOSAR 的核心概念和實作方法。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">快速連結</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">首頁</a></li>
+                        <li><a href="methodology.html" class="text-gray-300 hover:text-white transition-colors">開發方法論</a></li>
+                        <li><a href="concepts.html" class="text-gray-300 hover:text-white transition-colors">核心概念</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">資源</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">文件</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">範例</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors">社群</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Wistron. 本指南僅供學習和參考使用。
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- 返回頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 hover:bg-primary-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
